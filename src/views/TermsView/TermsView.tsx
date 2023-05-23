@@ -1,5 +1,5 @@
 import { FunctionComponent } from 'preact';
-import { NavigationLayout } from '~/layouts/NavigationLayout/NavigationLayout.tsx';
+import { NavigationLayout } from '~/layouts';
 
 export const TermsView: FunctionComponent = () => {
 	return (

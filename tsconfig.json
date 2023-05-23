@@ -13,17 +13,19 @@
 		"isolatedModules": true,
 		"jsx": "react-jsx",
 		"jsxImportSource": "preact",
+		"noEmit": true,
+
 
 		/* Linting */
 		"strict": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
 		"noFallthroughCasesInSwitch": true,
-
+		"baseUrl": "./",
 		"paths": {
 			"~assets/*": ["./src/assets/*"],
 			"~/*": ["./src/*"],
-			"~styles/*": ["./src/styles/*"]
+			"~styles/*": ["./src/styles/*"],
 		}
 	},
 	"include": ["src"],
