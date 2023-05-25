@@ -15,7 +15,6 @@
 		"jsxImportSource": "preact",
 		"noEmit": true,
 
-
 		/* Linting */
 		"strict": true,
 		"noUnusedLocals": true,
@@ -25,7 +24,7 @@
 		"paths": {
 			"~assets/*": ["./src/assets/*"],
 			"~/*": ["./src/*"],
-			"~styles/*": ["./src/styles/*"],
+			"~styles/*": ["./src/styles/*"]
 		}
 	},
 	"include": ["src"],
