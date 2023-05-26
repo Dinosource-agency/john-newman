@@ -1,0 +1,8 @@
+@use '../../utils' as *;
+
+.a-world {
+	max-width: rem(48px);
+	height: auto;
+	object-fit: contain;
+	mix-blend-mode: luminosity;
+}

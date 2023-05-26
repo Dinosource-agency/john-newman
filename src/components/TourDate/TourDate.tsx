@@ -1,5 +1,7 @@
 import { FunctionComponent } from 'preact';
 import { TourDateProps } from './TourDate.types';
+import { Image } from '../Image/Image';
+import rotatingEarthGif from '../../assets/images/Rotating_earth_animated_transparent.gif';
 
 export const TourDate: FunctionComponent<TourDateProps> = ({
 	tour,
@@ -18,7 +20,11 @@ export const TourDate: FunctionComponent<TourDateProps> = ({
 						{venue}, {city}, {country}
 					</p>
 				</div>
-				<p> image </p>
+				<Image
+					src={rotatingEarthGif}
+					alt="rotating earth"
+					className="a-world"
+				/>
 			</div>
 			<div className="m-tour-date__link">
 				<a href={link}>{linkText}</a>
