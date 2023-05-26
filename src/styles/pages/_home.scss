@@ -5,3 +5,15 @@ body {
 	color: $white;
 	background-color: #222222;
 }
+
+.p-home {
+	&__tour {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: rem(16px);
+
+		@include respond-to($tablet) {
+			grid-template-columns: 1fr;
+		}
+	}
+}

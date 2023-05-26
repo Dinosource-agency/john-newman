@@ -11,19 +11,23 @@ export const HomeView: FunctionComponent = () => {
 				Home
 			</Heading>
 
-			<h4 className="u-layout-constrain h4">Tour dates</h4>
-			<div className="u-layout-grid p-home__tour__dates">
-				{TourDateMock.map((tourDate, index) => (
-					<TourDate
-						key={index}
-						tour={tourDate.tour}
-						venue={tourDate.venue}
-						city={tourDate.city}
-						country={tourDate.country}
-						link={tourDate.link}
-						linkText={tourDate.linkText}
-					/>
-				))}
+			<div className="u-layout-constrain">
+				<Heading headingType="h4" headingStyle="h4">
+					Tour dates
+				</Heading>
+				<div className="p-home__tour">
+					{TourDateMock.map((tourDate, index) => (
+						<TourDate
+							key={index}
+							tour={tourDate.tour}
+							venue={tourDate.venue}
+							city={tourDate.city}
+							country={tourDate.country}
+							link={tourDate.link}
+							linkText={tourDate.linkText}
+						/>
+					))}
+				</div>
 			</div>
 		</NavigationLayout>
 	);

@@ -2,7 +2,6 @@
 import { FunctionComponent } from 'preact';
 import { TourDateProps } from './TourDate.types';
 import { Image } from '../Image/Image';
-import rotatingEarthGif from '../../assets/images/Rotating_earth_animated_transparent.gif';
 
 export const TourDate: FunctionComponent<TourDateProps> = ({
 	tour,
@@ -22,7 +21,7 @@ export const TourDate: FunctionComponent<TourDateProps> = ({
 					</p>
 				</div>
 				<Image
-					src={rotatingEarthGif}
+					src="images/rotating_earth_animated_transparent.gif"
 					alt="rotating earth"
 					className="a-world"
 				/>
