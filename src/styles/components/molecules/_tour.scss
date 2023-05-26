@@ -1,0 +1,35 @@
+@use '../../base/variables' as *;
+@use '../../utils' as *;
+
+.m-tour-date {
+	background-color: $rich-black;
+	padding: rem(24px);
+
+	&__details {
+		display: flex;
+		flex-direction: row;
+		align-items: top;
+		justify-content: space-between;
+		margin-bottom: rem(24px);
+	}
+
+	&__info {
+		p {
+			margin: 0;
+		}
+		&__name {
+			margin-bottom: rem(8px) !important;
+		}
+	}
+
+	&__link {
+		a {
+			text-decoration: none;
+			color: $dark-scale0;
+			text-transform: uppercase;
+			border: rem(1px) solid $dark-scale60;
+			border-radius: rem(24px);
+			padding: rem(8px) rem(12px);
+		}
+	}
+}
