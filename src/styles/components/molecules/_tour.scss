@@ -4,6 +4,15 @@
 .m-tour-date {
 	background-color: $rich-black;
 	padding: rem(24px);
+	grid-column: span 4;
+
+	@include respond-to($tablet) {
+		grid-column: span 12;
+	}
+
+	@include respond-to($mobile) {
+		grid-column: span 4;
+	}
 
 	&__details {
 		display: flex;
@@ -19,6 +28,11 @@
 		}
 		&__name {
 			margin-bottom: rem(8px) !important;
+
+			@include respond-to($mobile) {
+				font-size: rem(16px);
+				font-weight: bold;
+			}
 		}
 	}
 
