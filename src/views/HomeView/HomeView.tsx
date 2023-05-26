@@ -8,10 +8,6 @@ export const HomeView: FunctionComponent = () => {
 			<Heading headingType="h2" headingStyle="h2">
 				Home
 			</Heading>
-
-			<section className="u-layout-grid">
-				<h2>Home</h2>
-			</section>
 		</NavigationLayout>
 	);
 };
