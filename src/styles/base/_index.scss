@@ -1,2 +1,2 @@
 @use 'typography' as *;
-@use 'variables' as *;
+@forward 'variables';
