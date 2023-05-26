@@ -3,37 +3,35 @@
 @use './../base/variables' as *;
 
 .u-layout-constrain {
-  max-width: rem(1440px);
-  margin: 0 auto;
-  padding: 0 rem(24px);
+	max-width: rem(1440px);
+	margin: 0 auto;
+	padding: 0 rem(24px);
 
-  @include respond-to($tablet) {
-    padding: 0 rem(48px);
-  }
+	@include respond-to($tablet) {
+		padding: 0 rem(48px);
+	}
 
-  @include respond-to($mobile) {
-    padding: 0 rem(32px);
-  }
-
+	@include respond-to($mobile) {
+		padding: 0 rem(32px);
+	}
 }
 
 .u-layout-grid {
-  max-width: rem(1440px);
-  margin: 0 auto;
-  padding: 0 rem(24px);
+	max-width: rem(1440px);
+	margin: 0 auto;
+	padding: 0 rem(24px);
 
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: rem(24px);
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	gap: rem(24px);
 
-  @include respond-to($tablet) {
-    padding: 0 rem(48px);
-    gap: rem(16px);
-  }
+	@include respond-to($tablet) {
+		padding: 0 rem(48px);
+		gap: rem(16px);
+	}
 
-  @include respond-to($mobile) {
-    padding: 0 rem(32px);
-    grid-template-columns: repeat(4, 1fr);
-  }
-
+	@include respond-to($mobile) {
+		padding: 0 rem(32px);
+		grid-template-columns: repeat(4, 1fr);
+	}
 }
