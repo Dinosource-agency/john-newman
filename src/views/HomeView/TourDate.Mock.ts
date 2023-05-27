@@ -32,3 +32,10 @@ export const TourDateMock = [
 		linkText: 'external site',
 	},
 ];
+
+export const SocialLinksMock = {
+	facebook: 'https://www.facebook.com',
+	instagram: 'https://www.instagram.com',
+	twitter: 'https://www.twitter.com',
+	tiktok: 'https://www.tiktok.com',
+};
