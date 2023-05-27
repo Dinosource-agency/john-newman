@@ -1,0 +1,91 @@
+@use './../../utils' as *;
+
+@mixin icon(
+	$icon,
+	$width,
+	$height,
+	$position,
+	$background-position,
+	$background-size
+) {
+	&::before {
+		content: '';
+		display: block;
+		background-image: url($icon);
+		background-size: $background-size;
+		background-position: $background-position;
+		position: absolute;
+		width: $width;
+		height: $height;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+$facebook-icon: 'icons/facebook-icon.svg';
+$instagram-icon: 'icons/instagram-icon.svg';
+$twitter-icon: 'icons/twitter-icon.svg';
+$tiktok-icon: 'icons/tiktok-icon.svg';
+
+.o-social-icons {
+	display: flex;
+	flex-direction: row;
+	gap: rem(24px);
+
+	&--column {
+		flex-direction: column;
+	}
+
+	&__icon {
+		width: rem(48px);
+		height: rem(48px);
+		transition: all 0.3s ease-in-out;
+		position: relative;
+		cursor: pointer;
+
+		&--facebook {
+			@include icon(
+				$facebook-icon,
+				rem(24px),
+				rem(24px),
+				center,
+				center,
+				cover
+			);
+		}
+
+		&--instagram {
+			@include icon(
+				$instagram-icon,
+				rem(24px),
+				rem(24px),
+				center,
+				center,
+				cover
+			);
+		}
+
+		&--twitter {
+			@include icon(
+				$twitter-icon,
+				rem(24px),
+				rem(24px),
+				center,
+				center,
+				cover
+			);
+		}
+
+		&--tiktok {
+			@include icon(
+				$tiktok-icon,
+				rem(24px),
+				rem(24px),
+				center,
+				center,
+				cover
+			);
+		}
+	}
+}

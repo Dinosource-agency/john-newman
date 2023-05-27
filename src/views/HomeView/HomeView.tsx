@@ -1,18 +1,23 @@
 import { FunctionComponent } from 'preact';
 import { NavigationLayout } from '~/layouts';
-import { Heading } from '~/components/Heading';
-import { TourDate } from '~/components/TourDate';
-import { MusicLink } from '~/components/MusicLink';
-import { Album } from '~/components/Album';
-import { TourDateMock } from './TourDate.Mock';
+import { Heading, TourDate, SocialIcons, MusicLink, Album } from '~/components';
+import { TourDateMock, SocialLinksMock } from './TourDate.Mock';
 import { AlbumMock } from './Album.Mock';
 
 export const HomeView: FunctionComponent = () => {
 	return (
 		<NavigationLayout>
-			<Heading headingType="h2" headingStyle="h2">
-				Home
-			</Heading>
+			<section className="p-home__header">
+				<div className="p-home__header__social-icons">
+					<SocialIcons
+						facebook={SocialLinksMock.facebook}
+						instagram={SocialLinksMock.instagram}
+						tiktok={SocialLinksMock.tiktok}
+						twitter={SocialLinksMock.twitter}
+						direction="column"
+					/>
+				</div>
+			</section>
 
 			<section id="music" className="u-layout-constrain">
 				<div className="p-home__releases--header">
@@ -49,7 +54,7 @@ export const HomeView: FunctionComponent = () => {
 				</div>
 			</section>
 
-			<div className="u-layout-constrain p-home--header">
+			<section id="live" className="u-layout-constrain p-home--header">
 				<Heading headingType="h4" headingStyle="h4">
 					Tour dates
 				</Heading>
@@ -66,7 +71,7 @@ export const HomeView: FunctionComponent = () => {
 						/>
 					))}
 				</div>
-			</div>
+			</section>
 		</NavigationLayout>
 	);
 };

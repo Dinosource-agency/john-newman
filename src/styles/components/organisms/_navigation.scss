@@ -1,0 +1,145 @@
+@use './../../utils' as *;
+@use './../../base/variables' as *;
+
+.o-navigation {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: rem(64px);
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	gap: rem(24px);
+	top: 0;
+
+	@include respond-to($tablet-small) {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 0;
+		padding-top: rem(32px);
+		padding-left: rem(24px);
+		padding-right: rem(24px);
+		flex-direction: row;
+		width: calc(100% - rem(48px)); // 24px padding left + 24px padding right
+
+		&--active {
+			background-color: $dark-scale100;
+		}
+	}
+
+	&__hamburger {
+		display: none;
+		cursor: pointer;
+		@include respond-to($tablet-small) {
+			position: relative;
+			display: block;
+			width: rem(36px);
+			height: rem(36px);
+			background-color: $dark-scale100;
+			flex-shrink: 0;
+
+			&::before,
+			&::after {
+				content: '';
+				display: block;
+				width: rem(20px);
+				height: 1px;
+				background-color: white;
+				transition: all 0.3s ease-in-out;
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+
+			&::before {
+				top: rem(12px);
+			}
+
+			&::after {
+				bottom: rem(12px);
+			}
+
+			&--active {
+				&::before {
+					top: 50%;
+					transform: translate(-50%, -50%) rotate(45deg);
+				}
+
+				&::after {
+					bottom: 50%;
+					transform: translate(-50%, 50%) rotate(-45deg);
+				}
+			}
+		}
+	}
+
+	&__logo {
+		&--big {
+			@include respond-to($tablet-small) {
+				display: none;
+			}
+		}
+
+		&--small {
+			display: none;
+			@include respond-to($tablet-small) {
+				display: block;
+			}
+		}
+	}
+
+	&__items {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		padding: rem(16px) 0;
+		margin: 0;
+		list-style: none;
+		background-color: $dark-scale100;
+
+		@include respond-to($tablet-small) {
+			display: none;
+			position: absolute;
+			min-height: calc(100vh - rem(160px));
+			top: 100%;
+			left: 0;
+			width: 100%;
+			flex-direction: column;
+			align-items: flex-start;
+			z-index: 1;
+			transition: all 0.3s ease-in-out;
+			padding: rem(64px) 0 0;
+			gap: rem(48px);
+
+			&--active {
+				display: flex;
+				align-items: center;
+			}
+		}
+
+		&__item {
+			padding-left: rem(40px);
+			padding-right: rem(40px);
+
+			@include respond-to($tablet-small) {
+				font-size: rem(48px);
+				text-align: center;
+				font-weight: 200;
+			}
+
+			&:not(:last-child) {
+				border-right: 1px solid white;
+
+				@include respond-to($tablet-small) {
+					border-right: none;
+				}
+			}
+
+			&__link {
+				color: $dark-scale0;
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
