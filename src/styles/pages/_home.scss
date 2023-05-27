@@ -7,6 +7,10 @@ body {
 }
 
 .p-home {
+	&--header {
+		margin-top: rem(256px);
+	}
+
 	&__tour {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
@@ -24,10 +28,34 @@ body {
 			flex-direction: row;
 			justify-content: space-between;
 			align-items: center;
+
+			@include respond-to(640px) {
+				flex-direction: column;
+				align-items: flex-start;
+			}
+		}
+
+		&__covers {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: rem(16px);
+
+			@include respond-to(1200px) {
+				grid-template-columns: repeat(3, 1fr);
+			}
+
+			@include respond-to($tablet) {
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			@include respond-to($mobile) {
+				grid-template-columns: 1fr;
+			}
 		}
 	}
 
 	&__links {
+		margin-bottom: rem(16px);
 		display: flex;
 		flex-direction: row;
 		gap: rem(16px);
