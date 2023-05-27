@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { FunctionComponent } from 'preact';
 import { TourDateProps } from './TourDate.types';
-import { Image } from '~/components/Image/Image';
+import { Image } from '~/components';
 
 export const TourDate: FunctionComponent<TourDateProps> = ({
 	tour,

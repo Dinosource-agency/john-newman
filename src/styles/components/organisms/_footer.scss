@@ -1,0 +1,69 @@
+@use '../../base/' as *;
+@use '../../utils' as *;
+
+.o-footer {
+	background-color: $rich-black;
+	margin-top: rem(192px);
+	padding-top: rem(120px);
+	padding-bottom: rem(120px);
+
+	@include respond-to($tablet) {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__details {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@include respond-to($tablet) {
+			flex-direction: column;
+		}
+
+		a {
+			color: $dark-scale0;
+			text-decoration: none;
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+
+		&__logo {
+			max-height: rem(24px);
+			object-fit: contain;
+			margin-bottom: rem(32px);
+		}
+	}
+
+	&__links {
+		display: flex;
+		flex-direction: column;
+		align-items: left;
+
+		&__link {
+			margin-bottom: rem(8px);
+		}
+	}
+
+	&__socials {
+		p {
+			margin: 0 0 rem(8px) 0;
+		}
+	}
+
+	&__creator {
+		display: flex;
+		justify-content: center;
+		color: $dark-scale0;
+
+		&__link {
+			color: white;
+			text-decoration: underline;
+			font-weight: bold;
+		}
+	}
+}

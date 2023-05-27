@@ -1,6 +1,6 @@
 import { FunctionComponent } from 'preact';
 import { NavigationLayout } from '~/layouts';
-import { Heading, TourDate, SocialIcons } from '~/components';
+import { Heading, TourDate, SocialIcons, Footer } from '~/components';
 import { TourDateMock, SocialLinksMock } from './TourDate.Mock';
 
 export const HomeView: FunctionComponent = () => {
@@ -17,6 +17,7 @@ export const HomeView: FunctionComponent = () => {
 					/>
 				</div>
 			</section>
+
 			<section id="live" className="u-layout-constrain">
 				<Heading headingType="h4" headingStyle="h4">
 					Tour dates
@@ -35,6 +36,8 @@ export const HomeView: FunctionComponent = () => {
 					))}
 				</div>
 			</section>
+
+			<Footer />
 		</NavigationLayout>
 	);
 };
