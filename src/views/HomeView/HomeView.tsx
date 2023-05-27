@@ -14,7 +14,7 @@ export const HomeView: FunctionComponent = () => {
 				Home
 			</Heading>
 
-			<div className="u-layout-constrain">
+			<section id="music" className="u-layout-constrain">
 				<div className="p-home__releases--header">
 					<Heading headingType="h4" headingStyle="h4">
 						Latest releases
@@ -47,7 +47,7 @@ export const HomeView: FunctionComponent = () => {
 						/>
 					))}
 				</div>
-			</div>
+			</section>
 
 			<div className="u-layout-constrain p-home--header">
 				<Heading headingType="h4" headingStyle="h4">
