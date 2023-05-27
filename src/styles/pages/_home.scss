@@ -16,4 +16,43 @@ body {
 			grid-template-columns: 1fr;
 		}
 	}
+
+	&__releases {
+		&--header {
+			margin-top: rem(256px);
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+
+	&__links {
+		display: flex;
+		flex-direction: row;
+		gap: rem(16px);
+
+		&__spotify {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: rem(8px);
+			text-decoration: none;
+			color: $dark-scale100;
+			background-color: $spotify-green;
+			border-radius: rem(20px);
+			padding: rem(8px) rem(12px);
+		}
+		&__applemusic {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: rem(8px);
+			text-decoration: none;
+			color: $dark-scale60;
+			background-color: $dark-scale0;
+			border-radius: rem(20px);
+			padding: rem(8px) rem(12px);
+		}
+	}
 }
