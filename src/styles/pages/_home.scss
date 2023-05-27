@@ -56,7 +56,7 @@ body {
 			justify-content: space-between;
 			align-items: center;
 
-			@include respond-to(640px) {
+			@include respond-to($tablet-mini) {
 				flex-direction: column;
 				align-items: flex-start;
 			}
