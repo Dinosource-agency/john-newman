@@ -39,3 +39,9 @@ export const SocialLinksMock = {
 	twitter: 'https://www.twitter.com',
 	tiktok: 'https://www.tiktok.com',
 };
+
+export const BioMock = {
+	img: 'https://via.placeholder.com/150',
+	title: 'The Fake Title',
+	content: 'The Fake Content',
+};
