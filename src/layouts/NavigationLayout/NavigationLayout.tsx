@@ -8,7 +8,7 @@ export const NavigationLayout: FunctionComponent<NavigationLayoutProps> = ({
 }) => {
 	return (
 		<>
-			<Navigation shopUrl={shopUrl} />
+			<Navigation shopUrl={shopUrl || ''} />
 			<main>{children}</main>
 		</>
 	);
