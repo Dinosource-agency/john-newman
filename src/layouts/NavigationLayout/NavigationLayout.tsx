@@ -4,10 +4,11 @@ import { Navigation } from '~/components';
 
 export const NavigationLayout: FunctionComponent<NavigationLayoutProps> = ({
 	children,
+	shopUrl,
 }) => {
 	return (
 		<>
-			<Navigation />
+			<Navigation shopUrl={shopUrl} />
 			<main>{children}</main>
 		</>
 	);
