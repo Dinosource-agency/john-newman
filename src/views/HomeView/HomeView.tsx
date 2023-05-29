@@ -1,7 +1,8 @@
 import { FunctionComponent } from 'preact';
 import { NavigationLayout } from '~/layouts';
-import { Heading, TourDate, SocialIcons } from '~/components';
+import { Heading, TourDate, SocialIcons, MusicLink, Album } from '~/components';
 import { TourDateMock } from './TourDate.Mock';
+import { AlbumMock } from './Album.Mock';
 import { useHomePage } from '~/hooks';
 
 export const HomeView: FunctionComponent = () => {
@@ -20,7 +21,43 @@ export const HomeView: FunctionComponent = () => {
 					/>
 				</div>
 			</section>
-			<section id="live" className="u-layout-constrain">
+
+			<section id="music" className="u-layout-constrain">
+				<div className="p-home__releases__heading">
+					<Heading headingType="h4" headingStyle="h4">
+						Latest releases
+					</Heading>
+					<div className="p-home__links">
+						<MusicLink
+							className="p-home__links__spotify"
+							linkText="Spotify"
+							link="https://open.spotify.com/artist/34v5MVKeQnIo0CWYMbbrPf?si=JVTG9ZAeS6yxcyiTFxQyKQ"
+							src="icons/spotify-icon.svg"
+						/>
+						<MusicLink
+							className="p-home__links__applemusic"
+							linkText="Apple Music"
+							link="https://music.apple.com/us/artist/john-newman/649230577"
+							src="icons/apple-icon.svg"
+						/>
+					</div>
+				</div>
+
+				<div className="p-home__releases__covers">
+					{AlbumMock.map((album, index) => (
+						<Album
+							key={index}
+							src={album.cover}
+							alt={album.alt}
+							spotifyLink={album.spotify}
+							appleMusicLink={album.appleMusic}
+							breezerLink={album.breezer}
+						/>
+					))}
+				</div>
+			</section>
+
+			<section id="live" className="u-layout-constrain p-home__heading">
 				<Heading headingType="h4" headingStyle="h4">
 					Tour dates
 				</Heading>
