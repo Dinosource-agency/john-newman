@@ -1,6 +1,6 @@
 import { FunctionComponent } from 'preact';
-import { useState } from 'preact/hooks';
-import { Image } from '~/components/Image';
+import { Link } from 'preact-router/match';
+import { Image } from '~/components';
 import { AlbumProps } from './Album.types';
 
 export const Album: FunctionComponent<AlbumProps> = ({
@@ -10,29 +10,21 @@ export const Album: FunctionComponent<AlbumProps> = ({
 	appleMusicLink,
 	breezerLink,
 }) => {
-	const [isHovered, setIsHovered] = useState(false);
-
-	const handleMouseEnter = () => {
-		setIsHovered(true);
-	};
-
-	const handleMouseLeave = () => {
-		setIsHovered(false);
-	};
 	return (
-		<div
-			className={`m-album-container ${isHovered ? 'hovered' : ''}`}
-			onMouseEnter={handleMouseEnter}
-			onMouseLeave={handleMouseLeave}
-		>
+		<div className="m-album-container">
 			<Image src={src} alt={alt} className="m-albumcover" />
-			{isHovered && (
-				<div className="m-album-links">
-					<a href={spotifyLink}>Spotify</a>
-					<a href={appleMusicLink}>Apple Music</a>
-					<a href={breezerLink}>Deezer</a>
-				</div>
-			)}
+
+			<div className="m-album-links">
+				<Link className="m-album-links__link" href={spotifyLink}>
+					Spotify
+				</Link>
+				<Link className="m-album-links__link" href={appleMusicLink}>
+					Apple Music
+				</Link>
+				<Link className="m-album-links__link" href={breezerLink}>
+					Deezer
+				</Link>
+			</div>
 		</div>
 	);
 };
