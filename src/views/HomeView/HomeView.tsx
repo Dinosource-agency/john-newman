@@ -1,19 +1,22 @@
 import { FunctionComponent } from 'preact';
 import { NavigationLayout } from '~/layouts';
 import { Heading, TourDate, SocialIcons, MusicLink, Album } from '~/components';
-import { TourDateMock, SocialLinksMock } from './TourDate.Mock';
+import { TourDateMock } from './TourDate.Mock';
 import { AlbumMock } from './Album.Mock';
+import { useHomePage } from '~/hooks';
 
 export const HomeView: FunctionComponent = () => {
+	const { data } = useHomePage();
+
 	return (
-		<NavigationLayout>
+		<NavigationLayout shopUrl={data?.shopUrl}>
 			<section className="p-home__header">
 				<div className="p-home__header__social-icons">
 					<SocialIcons
-						facebook={SocialLinksMock.facebook}
-						instagram={SocialLinksMock.instagram}
-						tiktok={SocialLinksMock.tiktok}
-						twitter={SocialLinksMock.twitter}
+						facebook={data?.socials.facebook}
+						instagram={data?.socials.instagram}
+						tiktok={data?.socials.tiktok}
+						twitter={data?.socials.twitter}
 						direction="column"
 					/>
 				</div>

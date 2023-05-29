@@ -12,6 +12,7 @@
 		"prepare": "husky install"
 	},
 	"dependencies": {
+		"@sanity/client": "^6.1.2",
 		"normalize.css": "^8.0.1",
 		"preact": "^10.13.1",
 		"preact-router": "^4.1.1",
