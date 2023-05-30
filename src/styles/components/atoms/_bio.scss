@@ -1,0 +1,11 @@
+@use '../../utils' as *;
+
+.a-bio {
+	width: 45%;
+	&__h5 {
+		margin: 0;
+	}
+	&__p {
+		margin: 1em 0;
+	}
+}

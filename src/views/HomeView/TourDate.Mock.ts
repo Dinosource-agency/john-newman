@@ -45,7 +45,7 @@ export const BioMock = {
 		img: [
 			{
 				_id: 'je id',
-				url: 'https://via.placeholder.com/150',
+				url: 'images/JN-bio.svg',
 			},
 		],
 		bio: [

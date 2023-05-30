@@ -1,0 +1,10 @@
+@use './functions' as *;
+@use './media-queries' as *;
+@use './../base/variables' as *;
+
+.u-layout-bio {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: 256px;
+}
