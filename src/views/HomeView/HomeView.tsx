@@ -47,18 +47,18 @@ export const HomeView: FunctionComponent = () => {
 					<p class="a-bio__p">
 						John Newman is a multi-faceted DJ, singer, songwriter,
 						and producer creating music on his terms. 2012 smash hit
-						‘Feel The Love’ in collaboration with Rudimental first
-						put the British upcoming artist on a trajectory to
-						stardom, going straight in at #1 in the Official UK
-						Charts. One year later, Newman affirmed himself as one
-						of the fasted growing mainstream artists by releasing
-						his debut solo single, ‘Love Me Again,’ taken from his
-						debut album 'Tribute.' The single became an instant UK
-						#1, charting in the Top 10 in over 30 countries and
-						amassing over 1.6 billion worldwide streams.
+						Feel The Love in collaboration with Rudimental first put
+						the British upcoming artist on a trajectory to stardom,
+						going straight in at #1 in the Official UK Charts. One
+						year later, Newman affirmed himself as one of the fasted
+						growing mainstream artists by releasing his debut solo
+						single, Love Me Again, taken from his debut album
+						Tribute. The single became an instant UK #1, charting in
+						the Top 10 in over 30 countries and amassing over 1.6
+						billion worldwide streams.
 					</p>
 				</div>
 			</section>
 		</NavigationLayout>
-	); /*<Bio about={BioMock.about.bio} />*/
+	);
 };
