@@ -34,6 +34,30 @@ body {
 		}
 	}
 
+	&__video{
+		margin-top: rem(192px);
+
+		&__title{
+			grid-column: 1/13;
+		}
+
+		&__embed--big {
+			grid-column: 1/13;
+		}
+
+		&__embed--small {
+			grid-column: span 4;
+
+			@include respond-to($tablet) {
+				grid-column: span 12;
+			}
+
+			@include respond-to($mobile) {
+				grid-column: span 4;
+			}
+		}
+	}
+
 	&__tour {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
