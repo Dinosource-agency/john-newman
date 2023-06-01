@@ -1,0 +1,49 @@
+@use '../../utils' as *;
+@use '../../base' as *;
+
+.m-album-container {
+	position: relative;
+	display: inline-block;
+}
+
+.m-albumcover {
+	max-width: 100%;
+	object-fit: contain;
+}
+
+.m-album-links {
+	visibility: hidden;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+
+	&__link {
+		display: block;
+		border: rem(1px) solid $dark-scale60;
+		border-radius: rem(24px);
+		padding: rem(8px) rem(20px);
+		margin-bottom: rem(8px);
+		color: $dark-scale10;
+		text-decoration: none;
+
+		@include respond-to($desktop-small) {
+			font-size: rem(14px);
+		}
+	}
+
+	&__link:hover {
+		color: $dark-scale100;
+		background-color: $dark-scale10;
+		border: rem(1px) solid $dark-scale10;
+	}
+}
+
+.m-album-container:hover .m-albumcover {
+	filter: brightness(50%);
+}
+
+.m-album-container:hover .m-album-links {
+	visibility: visible;
+}

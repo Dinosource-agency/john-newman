@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { FunctionComponent } from 'preact';
 import { Link } from 'preact-router';
 import { TourDateProps } from './TourDate.types';
