@@ -12,6 +12,7 @@
 		"prepare": "husky install"
 	},
 	"dependencies": {
+		"@portabletext/react": "^3.0.0",
 		"normalize.css": "^8.0.1",
 		"preact": "^10.13.1",
 		"preact-router": "^4.1.1",

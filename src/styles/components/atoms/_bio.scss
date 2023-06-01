@@ -1,11 +1,18 @@
 @use '../../utils' as *;
 
 .a-bio {
-	width: 45%;
+	max-width: 45%;
 	&__h5 {
 		margin: 0;
 	}
 	&__p {
 		margin: 1em 0;
+		font-size: rem(16px);
+		font-weight: 400;
+		line-height: rem(24px);
+	}
+	&__p:first-child {
+		font-size: 600;
+		background-color: red;
 	}
 }
