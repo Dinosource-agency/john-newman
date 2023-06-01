@@ -1,4 +1,5 @@
 import { FunctionComponent } from 'preact';
+import { Link } from 'preact-router';
 import { FooterProps } from './Footer.types';
 import { Image, SocialIcons } from '~/components';
 import { SocialLinksMock } from '~/views/HomeView/TourDate.Mock';
@@ -13,15 +14,18 @@ export const Footer: FunctionComponent<FooterProps> = () => {
 						alt="small logo John Newman"
 						className="o-footer__info__logo"
 					/>
-					<a href="#">Privacy Policy</a>
+					<a className="o-footer__info__link" href="/terms">
+						Privacy Policy
+					</a>
 				</div>
 				<div className="o-footer__links">
-					<a
+					<Link
 						className="o-footer__links__link"
+						target="_blank"
 						href="https://www.musicglue.com/johnnewman/"
 					>
 						Merchandise
-					</a>
+					</Link>
 					<a className="o-footer__links__link" href="#about">
 						About
 					</a>
@@ -30,7 +34,7 @@ export const Footer: FunctionComponent<FooterProps> = () => {
 					</a>
 				</div>
 				<div className="o-footer__socials">
-					<p>Social Media</p>
+					<p className="o-footer__socials__title">Social Media</p>
 					<SocialIcons
 						facebook={SocialLinksMock.facebook}
 						instagram={SocialLinksMock.instagram}
@@ -43,12 +47,13 @@ export const Footer: FunctionComponent<FooterProps> = () => {
 			<section className="o-footer__creator">
 				<p>
 					Created by &nbsp;
-					<a
+					<Link
 						className="o-footer__creator__link"
+						target="_blank"
 						href="https://dinosource.agency/"
 					>
 						Dinosource
-					</a>
+					</Link>
 				</p>
 			</section>
 		</footer>
