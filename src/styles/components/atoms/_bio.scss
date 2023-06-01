@@ -1,32 +1,30 @@
 @use '../../utils' as *;
 
 .a-bio {
+	&__image {
+		grid-column: 1/7;
+	}
 
-  &__image {
-    grid-column: 1/7;
-  }
+	&__about {
+		grid-column: 8/13;
 
-  &__about {
-    grid-column: 8/13;
+		.h5 {
+			margin: 0;
+		}
 
-    .h5 {
-      margin: 0;
-    }
+		&__paragraph {
+			font-weight: 400;
 
-    &__paragraph {
-      font-weight: 400;
+			p {
+				&:first-child {
+					font-weight: 600;
+					opacity: 1;
+				}
 
-      p {
-        &:first-child {
-          font-weight: 600;
-          opacity: 1;
-        }
-
-        &:not(:first-child) {
-          opacity: 0.7;
-        }
-      }
-    }
-  }
-
+				&:not(:first-child) {
+					opacity: 0.7;
+				}
+			}
+		}
+	}
 }
