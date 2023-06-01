@@ -1,18 +1,32 @@
 @use '../../utils' as *;
 
 .a-bio {
-	max-width: 45%;
-	&__h5 {
-		margin: 0;
-	}
-	&__p {
-		margin: 1em 0;
-		font-size: rem(16px);
-		font-weight: 400;
-		line-height: rem(24px);
-	}
-	&__p:first-child {
-		font-size: 600;
-		background-color: red;
-	}
+
+  &__image {
+    grid-column: 1/7;
+  }
+
+  &__about {
+    grid-column: 8/13;
+
+    .h5 {
+      margin: 0;
+    }
+
+    &__paragraph {
+      font-weight: 400;
+
+      p {
+        &:first-child {
+          font-weight: 600;
+          opacity: 1;
+        }
+
+        &:not(:first-child) {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
 }
