@@ -1,8 +1,16 @@
 import { FunctionComponent } from 'preact';
 import { NavigationLayout } from '~/layouts';
-import { Heading, TourDate, SocialIcons, MusicLink, Album } from '~/components';
+import {
+	Heading,
+	TourDate,
+	SocialIcons,
+	MusicLink,
+	Album,
+	Footer,
+} from '~/components';
 import { TourDateMock } from './TourDate.Mock';
 import { AlbumMock } from './Album.Mock';
+import { TermsMock } from './Terms.Mock';
 import { useHomePage } from '~/hooks';
 
 export const HomeView: FunctionComponent = () => {
@@ -75,6 +83,8 @@ export const HomeView: FunctionComponent = () => {
 					))}
 				</div>
 			</section>
+
+			<Footer termsLink={TermsMock.termsLink} />
 		</NavigationLayout>
 	);
 };

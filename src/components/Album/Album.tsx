@@ -1,5 +1,5 @@
 import { FunctionComponent } from 'preact';
-import { Link } from 'preact-router/match';
+import { Link } from 'preact-router';
 import { Image } from '~/components';
 import { AlbumProps } from './Album.types';
 
@@ -15,13 +15,25 @@ export const Album: FunctionComponent<AlbumProps> = ({
 			<Image src={src} alt={alt} className="m-albumcover" />
 
 			<div className="m-album-links">
-				<Link className="m-album-links__link" href={spotifyLink}>
+				<Link
+					className="m-album-links__link"
+					target="_blank"
+					href={spotifyLink}
+				>
 					Spotify
 				</Link>
-				<Link className="m-album-links__link" href={appleMusicLink}>
+				<Link
+					className="m-album-links__link"
+					target="_blank"
+					href={appleMusicLink}
+				>
 					Apple Music
 				</Link>
-				<Link className="m-album-links__link" href={breezerLink}>
+				<Link
+					className="m-album-links__link"
+					target="_blank"
+					href={breezerLink}
+				>
 					Deezer
 				</Link>
 			</div>

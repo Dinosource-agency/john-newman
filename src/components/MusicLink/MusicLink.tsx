@@ -1,7 +1,7 @@
 import { FunctionComponent } from 'preact';
 import { Image } from '~/components';
 import { MusicLinkProps } from './MusicLink.types';
-import { Link } from 'preact-router/match';
+import { Link } from 'preact-router';
 
 export const MusicLink: FunctionComponent<MusicLinkProps> = ({
 	className,
@@ -10,7 +10,7 @@ export const MusicLink: FunctionComponent<MusicLinkProps> = ({
 	src,
 }) => {
 	return (
-		<Link className={className} href={link}>
+		<Link target="_blank" className={className} href={link}>
 			<Image
 				className="a-music-icon"
 				src={src}
