@@ -10,6 +10,7 @@ import {
 } from '~/components';
 import { TourDateMock } from './TourDate.Mock';
 import { AlbumMock } from './Album.Mock';
+import { TermsMock } from './Terms.Mock';
 import { useHomePage } from '~/hooks';
 
 export const HomeView: FunctionComponent = () => {
@@ -83,7 +84,7 @@ export const HomeView: FunctionComponent = () => {
 				</div>
 			</section>
 
-			<Footer />
+			<Footer termsLink={TermsMock.termsLink} />
 		</NavigationLayout>
 	);
 };

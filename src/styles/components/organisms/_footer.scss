@@ -21,74 +21,74 @@
 			grid-template-rows: repeat(2, 1fr);
 			grid-template-columns: repeat(2, 1fr);
 		}
-	}
 
-	&__info {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		justify-content: space-between;
-
-		@include respond-to($tablet) {
-			grid-column: 1 / span 2;
-			grid-row: 1;
-			justify-content: flex-start;
-		}
-
-		&__link {
-			color: $dark-scale0;
-			text-decoration: none;
-		}
-		&__logo {
-			max-height: rem(24px);
-			object-fit: contain;
+		&__info {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: space-between;
 
 			@include respond-to($tablet) {
-				margin-bottom: rem(32px);
+				grid-column: 1 / span 2;
+				grid-row: 1;
+				justify-content: flex-start;
 			}
-		}
-	}
 
-	&__links {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
+			&__link {
+				color: $dark-scale0;
+				text-decoration: none;
+			}
+			&__logo {
+				max-height: rem(24px);
+				object-fit: contain;
 
-		&__link {
-			margin-bottom: rem(8px);
-			color: $dark-scale0;
-			text-decoration: none;
-		}
-
-		@include respond-to($tablet) {
-			align-self: flex-end;
-			grid-column: 1;
-			grid-row: 2;
-		}
-	}
-
-	&__socials {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-
-		@include respond-to($tablet) {
-			margin-left: auto;
-			grid-row: 1 / span 2;
-			grid-column: 2 / 3;
-		}
-
-		&__title {
-			margin: 0;
-
-			@include respond-to($tablet) {
-				display: none;
+				@include respond-to($tablet) {
+					margin-bottom: rem(32px);
+				}
 			}
 		}
 
-		@include respond-to($tablet) {
-			.o-social-icons {
-				flex-direction: column;
+		&__links {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			&__link {
+				margin-bottom: rem(8px);
+				color: $dark-scale0;
+				text-decoration: none;
+			}
+
+			@include respond-to($tablet) {
+				align-self: flex-end;
+				grid-column: 1;
+				grid-row: 2;
+			}
+		}
+
+		&__socials {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			@include respond-to($tablet) {
+				margin-left: auto;
+				grid-row: 1 / span 2;
+				grid-column: 2 / 3;
+			}
+
+			&__title {
+				margin: 0;
+
+				@include respond-to($tablet) {
+					display: none;
+				}
+			}
+
+			@include respond-to($tablet) {
+				.o-social-icons {
+					flex-direction: column;
+				}
 			}
 		}
 	}
@@ -99,7 +99,7 @@
 		color: $dark-scale0;
 
 		&__link {
-			color: white;
+			color: $white;
 			text-decoration: underline;
 			font-weight: bold;
 		}

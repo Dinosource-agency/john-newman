@@ -4,37 +4,48 @@ import { FooterProps } from './Footer.types';
 import { Image, SocialIcons } from '~/components';
 import { SocialLinksMock } from '~/views/HomeView/TourDate.Mock';
 
-export const Footer: FunctionComponent<FooterProps> = () => {
+export const Footer: FunctionComponent<FooterProps> = ({ termsLink }) => {
 	return (
 		<footer className="o-footer u-layout-constrain">
 			<section className="o-footer__details">
-				<div className="o-footer__info">
+				<div className="o-footer__details__info">
 					<Image
 						src="images/JN-logo-letters.png"
 						alt="small logo John Newman"
-						className="o-footer__info__logo"
+						className="o-footer__details__info__logo"
 					/>
-					<a className="o-footer__info__link" href="/terms">
-						Privacy Policy
-					</a>
-				</div>
-				<div className="o-footer__links">
 					<Link
-						className="o-footer__links__link"
+						className="o-footer__details__info__link"
+						href={termsLink}
+					>
+						Privacy Policy
+					</Link>
+				</div>
+				<div className="o-footer__details__links">
+					<Link
+						className="o-footer__details__links__link"
 						target="_blank"
 						href="https://www.musicglue.com/johnnewman/"
 					>
 						Merchandise
 					</Link>
-					<a className="o-footer__links__link" href="#about">
+					<Link
+						className="o-footer__details__links__link"
+						href="#about"
+					>
 						About
-					</a>
-					<a className="o-footer__links__link" href="#music">
+					</Link>
+					<Link
+						className="o-footer__details__links__link"
+						href="#music"
+					>
 						Latest releases
-					</a>
+					</Link>
 				</div>
-				<div className="o-footer__socials">
-					<p className="o-footer__socials__title">Social Media</p>
+				<div className="o-footer__details__socials">
+					<p className="o-footer__details__socials__title">
+						Social Media
+					</p>
 					<SocialIcons
 						facebook={SocialLinksMock.facebook}
 						instagram={SocialLinksMock.instagram}
