@@ -6,6 +6,8 @@ import { Heading } from '~/components';
 export const VideoCard: FunctionComponent<VideoCardProps> = ({
 	className,
 	videoUrl,
+	title,
+	description,
 }) => {
 	return (
 		<div className={className}>
@@ -15,12 +17,9 @@ export const VideoCard: FunctionComponent<VideoCardProps> = ({
 				headingType="h4"
 				headingStyle="h5"
 			>
-				The video title
+				{title}
 			</Heading>
-			<p className="p-video-card__description">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-				ullamcorper, nisl quis tincidunt aliquam, nunc nisl
-			</p>
+			<p className="p-video-card__description">{description}</p>
 		</div>
 	);
 };

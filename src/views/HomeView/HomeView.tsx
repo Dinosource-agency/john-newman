@@ -1,7 +1,7 @@
 import { FunctionComponent } from 'preact';
 import { NavigationLayout } from '~/layouts';
 import { Heading, TourDate, SocialIcons, VideoCard } from '~/components';
-import { TourDateMock } from './TourDate.Mock';
+import { HomeViewMock, YoutubeEmbedMock } from './HomeView.Mock.ts';
 //import { useHomePage } from '~/hooks';
 import { YouTubeEmbed } from 'react-social-media-embed';
 
@@ -38,30 +38,30 @@ export const HomeView: FunctionComponent = () => {
 				</div>
 				<div className="p-home__video__embed--big">
 					<YouTubeEmbed
-						url="https://www.youtube.com/watch?v=dgz2eVXWWAM"
+						url={YoutubeEmbedMock.embedUrl}
 						width={100 + '%'}
-						height={500}
+						youTubeProps={{
+							iframeClassName:
+								'p-home__video__embed--big__iframe',
+						}}
 					/>
 				</div>
-				<VideoCard
-					videoUrl="https://www.youtube.com/watch?v=dgz2eVXWWAM"
-					className="p-home__video__embed--small"
-				/>
-				<VideoCard
-					videoUrl="https://www.youtube.com/watch?v=dgz2eVXWWAM"
-					className="p-home__video__embed--small"
-				/>
-				<VideoCard
-					videoUrl="https://www.youtube.com/watch?v=dgz2eVXWWAM"
-					className="p-home__video__embed--small"
-				/>
+				{YoutubeEmbedMock.videos.map((video, index) => (
+					<VideoCard
+						key={index}
+						videoUrl={video.thumbnail}
+						title={video.title}
+						description={video.description}
+						className="p-home__video__embed--small"
+					/>
+				))}
 			</section>
 			<section id="live" className="u-layout-constrain">
 				<Heading headingType="h4" headingStyle="h4">
 					Tour dates
 				</Heading>
 				<div className="p-home__tour">
-					{TourDateMock.map((tourDate, index) => (
+					{HomeViewMock.map((tourDate, index) => (
 						<TourDate
 							key={index}
 							tour={tourDate.tour}
