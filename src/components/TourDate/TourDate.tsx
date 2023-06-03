@@ -1,7 +1,7 @@
-/* eslint-disable react/prop-types */
 import { FunctionComponent } from 'preact';
+import { Link } from 'preact-router';
 import { TourDateProps } from './TourDate.types';
-import { Image } from '~/components/Image/Image';
+import { Image } from '~/components';
 
 export const TourDate: FunctionComponent<TourDateProps> = ({
 	tour,
@@ -27,7 +27,9 @@ export const TourDate: FunctionComponent<TourDateProps> = ({
 				/>
 			</div>
 			<div className="m-tour-date__link">
-				<a href={link}>{linkText}</a>
+				<Link target="_blank" href={link}>
+					{linkText}
+				</Link>
 			</div>
 		</div>
 	);

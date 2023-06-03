@@ -4,3 +4,7 @@ export * from './TourDate';
 export * from './SocialIcons';
 export * from './Youtube';
 export * from './VideoCard';
+export * from './MusicLink';
+export * from './Album';
+export * from './Footer';
+export * from './Image';
