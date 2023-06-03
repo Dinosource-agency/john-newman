@@ -1,15 +1,15 @@
 @use '../../utils' as *;
 
 .p-video-card {
-  &__title {
-    margin-top: rem(24px);
-    margin-bottom: rem(8px);
-    line-height: 1;
-  }
+	&__title {
+		margin-top: rem(24px);
+		margin-bottom: rem(8px);
+		line-height: 1;
+	}
 
-  &__description {
-    margin: 0;
-    font-size: rem(12px);
-    font-weight: 200;
-  }
+	&__description {
+		margin: 0;
+		font-size: rem(12px);
+		font-weight: 200;
+	}
 }

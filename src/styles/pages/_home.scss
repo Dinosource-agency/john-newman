@@ -34,10 +34,10 @@ body {
 		}
 	}
 
-	&__video{
+	&__video {
 		margin-top: rem(192px);
 
-		&__title{
+		&__title {
 			grid-column: 1/13;
 		}
 
@@ -46,7 +46,7 @@ body {
 			height: rem(692px);
 
 			@include respond-to($tablet) {
-				height: rem(480px)
+				height: rem(480px);
 			}
 
 			@include respond-to($mobile) {
@@ -57,7 +57,7 @@ body {
 				height: rem(692px);
 
 				@include respond-to($tablet) {
-					height: rem(480px)
+					height: rem(480px);
 				}
 
 				@include respond-to($mobile) {
@@ -69,16 +69,13 @@ body {
 		&__embed--small {
 			grid-column: span 4;
 
-
 			@include respond-to($tablet) {
 				grid-column: span 12;
-
 			}
 
 			@include respond-to($mobile) {
 				grid-column: span 4;
 			}
-
 		}
 	}
 
