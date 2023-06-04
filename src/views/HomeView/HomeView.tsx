@@ -7,7 +7,7 @@ import {
 	YoutubeEmbedMock,
 	AlbumMock,
 	TermsMock,
-	BioMock
+	BioMock,
 } from './HomeView.Mock.ts';
 //import { useHomePage } from '~/hooks';
 import { YouTubeEmbed } from 'react-social-media-embed';
