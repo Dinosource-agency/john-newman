@@ -7,8 +7,8 @@ body {
 }
 
 .p-home {
-	&__heading {
-		margin-top: rem(120px);
+	&__tour-dates {
+		margin-top: rem(192px);
 	}
 
 	&__header {
@@ -23,6 +23,7 @@ body {
 			right: 0;
 			top: 50%;
 			transform: translateY(-50%);
+			margin-right: rem(24px);
 
 			@include respond-to($tablet-small) {
 				top: auto;
@@ -30,6 +31,7 @@ body {
 				right: unset;
 				left: 50%;
 				transform: translateX(-50%) translateY(0);
+				margin-right: 0;
 
 				.o-social-icons {
 					flex-direction: row;
@@ -100,7 +102,7 @@ body {
 
 	&__releases {
 		&__heading {
-			margin-top: rem(120px);
+			margin-top: rem(192px);
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
@@ -162,7 +164,7 @@ body {
 	}
 
 	&__bio {
-		margin-top: rem(256px);
+		margin-top: rem(192px);
 
 		&__image {
 			max-width: 100%;

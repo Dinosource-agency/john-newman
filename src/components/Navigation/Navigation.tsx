@@ -1,6 +1,6 @@
 import { Link } from 'preact-router';
 import { FunctionComponent } from 'preact';
-import { useState } from 'preact/hooks';
+import { useEffect, useState } from 'preact/hooks';
 import { NavigationProps } from './Navigation.types';
 
 export const Navigation: FunctionComponent<NavigationProps> = ({ shopUrl }) => {
@@ -8,6 +8,12 @@ export const Navigation: FunctionComponent<NavigationProps> = ({ shopUrl }) => {
 	const toggleHamburgerMenu = () => {
 		setIsHamburgerMenuActive(!isHamburgerMenuActive);
 	};
+
+	useEffect(() => {
+		isHamburgerMenuActive
+			? (document.body.style.overflow = 'hidden')
+			: (document.body.style.overflow = 'auto');
+	}, [isHamburgerMenuActive]);
 	return (
 		<nav
 			className={
@@ -50,39 +56,42 @@ export const Navigation: FunctionComponent<NavigationProps> = ({ shopUrl }) => {
 					onClick={toggleHamburgerMenu}
 					className="o-navigation__items__item"
 				>
-					<a className="o-navigation__items__item__link" href="/">
+					<Link className="o-navigation__items__item__link" href="/">
 						Home
-					</a>
+					</Link>
 				</li>
 				<li
 					onClick={toggleHamburgerMenu}
 					className="o-navigation__items__item"
 				>
-					<a className="o-navigation__items__item__link" href="#live">
+					<Link
+						className="o-navigation__items__item__link"
+						href="#live"
+					>
 						Live
-					</a>
+					</Link>
 				</li>
 				<li
 					onClick={toggleHamburgerMenu}
 					className="o-navigation__items__item"
 				>
-					<a
+					<Link
 						className="o-navigation__items__item__link"
 						href="#music"
 					>
 						Music
-					</a>
+					</Link>
 				</li>
 				<li
 					onClick={toggleHamburgerMenu}
 					className="o-navigation__items__item"
 				>
-					<a
+					<Link
 						className="o-navigation__items__item__link"
 						href="#about"
 					>
 						About
-					</a>
+					</Link>
 				</li>
 				<li
 					onClick={toggleHamburgerMenu}

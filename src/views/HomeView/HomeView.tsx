@@ -46,7 +46,7 @@ export const HomeView: FunctionComponent = () => {
 					/>
 				</div>
 			</section>
-			<section className="u-layout-grid p-home__video">
+			<section id="live" className="u-layout-grid p-home__video">
 				<div className="p-home__video__title">
 					<Heading headingType="h4" headingStyle="h4">
 						Show video
@@ -108,7 +108,7 @@ export const HomeView: FunctionComponent = () => {
 				</div>
 			</section>
 
-			<section id="live" className="u-layout-constrain p-home__heading">
+			<section className="u-layout-constrain p-home__tour-dates">
 				<Heading headingType="h4" headingStyle="h4">
 					Tour dates
 				</Heading>
@@ -126,7 +126,7 @@ export const HomeView: FunctionComponent = () => {
 					))}
 				</div>
 			</section>
-			<section id="live" className="u-layout-grid p-home__bio">
+			<section id="about" className="u-layout-grid p-home__bio">
 				<Image
 					src={BioMock.about.img.url}
 					alt="John Newman"

@@ -1,4 +1,4 @@
-@use '../../base/' as *;
+@use '../../base' as *;
 @use '../../utils' as *;
 
 .o-footer {
@@ -93,6 +93,7 @@
 		display: flex;
 		justify-content: center;
 		color: $dark-scale0;
+		margin-top: rem(48px);
 
 		&__link {
 			color: $white;

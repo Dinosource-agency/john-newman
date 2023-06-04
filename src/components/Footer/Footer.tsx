@@ -57,16 +57,14 @@ export const Footer: FunctionComponent<FooterProps> = ({ termsLink }) => {
 					</div>
 				</section>
 				<section className="o-footer__creator">
-					<p>
-						Created by &nbsp;
-						<Link
-							className="o-footer__creator__link"
-							target="_blank"
-							href="https://dinosource.agency/"
-						>
-							Dinosource
-						</Link>
-					</p>
+					Created by &nbsp;
+					<Link
+						className="o-footer__creator__link"
+						target="_blank"
+						href="https://dinosource.agency/"
+					>
+						Dinosource
+					</Link>
 				</section>
 			</div>
 		</footer>
