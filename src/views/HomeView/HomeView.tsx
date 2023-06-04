@@ -37,17 +37,17 @@ export const HomeView: FunctionComponent = () => {
 					))}
 				</div>
 			</section>
-			<section id="live" className="u-layout-grid a-bio__padding">
+			<section id="live" className="u-layout-grid m-bio__padding">
 				<Image
 					src={BioMock.about.img[0].url}
 					alt="John Newman"
-					className="a-bio a-bio__image"
+					className="m-bio m-bio__image"
 				/>
-				<div class="a-bio__about">
+				<div class="m-bio__about">
 					<Heading headingType="h5" headingStyle="h5">
 						Something about me
 					</Heading>
-					<div className="a-bio__about__paragraph">
+					<div className="m-bio__about__paragraph">
 						<PortableText value={BioMock.about.bio} />
 					</div>
 				</div>

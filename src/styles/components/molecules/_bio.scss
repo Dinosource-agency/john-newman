@@ -1,11 +1,11 @@
 @use '../../utils' as *;
 @use '../../base/index' as *;
 
-.a-bio__padding {
-	margin: rem(120px) 0;
-	grid-template-rows: none;
-}
-.a-bio {
+.m-bio {
+	&__padding {
+		margin: rem(120px) 0;
+		grid-template-rows: none;
+	}
 	&__image {
 		max-width: 100%;
 		grid-column: 1/6;
