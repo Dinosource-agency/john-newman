@@ -11,5 +11,5 @@ then
     fnm use
 fi
 
-npm run lint-staged
+npm run pre-commit
 
