@@ -43,6 +43,10 @@ body {
 
 		&__title {
 			grid-column: 1/13;
+
+			@include respond-to($mobile) {
+				grid-column: 1/4;
+			}
 		}
 
 		&__embed--big {
@@ -54,6 +58,7 @@ body {
 			}
 
 			@include respond-to($mobile) {
+				grid-column: span 4;
 				height: rem(250px);
 			}
 

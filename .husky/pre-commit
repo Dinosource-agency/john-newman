@@ -11,6 +11,5 @@ then
     fnm use
 fi
 
-npm run format
-npm run lint
+npm run lint-staged
 
