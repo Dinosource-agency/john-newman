@@ -2,7 +2,6 @@ export * from './Navigation';
 export * from './Heading';
 export * from './TourDate';
 export * from './SocialIcons';
-export * from './Bio';
 export * from './Youtube';
 export * from './VideoCard';
 export * from './MusicLink';
