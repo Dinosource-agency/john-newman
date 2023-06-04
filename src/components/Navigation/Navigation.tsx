@@ -10,10 +10,16 @@ export const Navigation: FunctionComponent<NavigationProps> = ({ shopUrl }) => {
 	};
 
 	useEffect(() => {
-		isHamburgerMenuActive
-			? (document.body.style.overflow = 'hidden')
-			: (document.body.style.overflow = 'auto');
+		const closeHamburgerMenu = () => {
+			setIsHamburgerMenuActive(false);
+		};
+
+		window.addEventListener('scroll', closeHamburgerMenu);
+		return () => {
+			window.removeEventListener('scroll', closeHamburgerMenu);
+		};
 	}, [isHamburgerMenuActive]);
+
 	return (
 		<nav
 			className={
