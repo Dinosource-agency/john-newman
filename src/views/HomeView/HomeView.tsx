@@ -142,7 +142,7 @@ export const HomeView: FunctionComponent = () => {
 				</div>
 			</section>
 
-			<Footer termsLink={TermsMock.termsLink} />
+			<Footer termsLink={TermsMock.termsLink} shopUrl={data?.shopUrl} />
 		</NavigationLayout>
 	);
 };

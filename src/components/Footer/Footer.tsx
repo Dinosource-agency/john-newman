@@ -4,7 +4,10 @@ import { FooterProps } from './Footer.types';
 import { Image, SocialIcons } from '~/components';
 import { SocialLinksMock } from '~/views/HomeView/HomeView.Mock';
 
-export const Footer: FunctionComponent<FooterProps> = ({ termsLink }) => {
+export const Footer: FunctionComponent<FooterProps> = ({
+	termsLink,
+	shopUrl,
+}) => {
 	return (
 		<footer className="o-footer">
 			<div className="u-layout-constrain">
@@ -26,7 +29,7 @@ export const Footer: FunctionComponent<FooterProps> = ({ termsLink }) => {
 						<Link
 							className="o-footer__details__links__link"
 							target="_blank"
-							href="https://www.musicglue.com/johnnewman/"
+							href={shopUrl}
 						>
 							Merchandise
 						</Link>
