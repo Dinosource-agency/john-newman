@@ -1,10 +1,12 @@
 import { FunctionComponent } from 'preact';
 import { NavigationLayout } from '~/layouts';
+import { PortableText } from '@portabletext/react';
 import {
 	HomeViewMock,
 	YoutubeEmbedMock,
 	AlbumMock,
 	TermsMock,
+	BioMock,
 } from './HomeView.Mock.ts';
 //import { useHomePage } from '~/hooks';
 import { YouTubeEmbed } from 'react-social-media-embed';
@@ -16,6 +18,7 @@ import {
 	Album,
 	Footer,
 	VideoCard,
+	Image,
 } from '~/components';
 
 export const HomeView: FunctionComponent = () => {
@@ -121,6 +124,21 @@ export const HomeView: FunctionComponent = () => {
 							linkText={tourDate.linkText}
 						/>
 					))}
+				</div>
+			</section>
+			<section id="live" className="u-layout-grid p-home__bio">
+				<Image
+					src={BioMock.about.img.url}
+					alt="John Newman"
+					className="p-home__bio__image"
+				/>
+				<div className="p-home__bio__about">
+					<Heading headingType="h5" headingStyle="h5">
+						Something about me
+					</Heading>
+					<div className="p-home__bio__about__paragraph">
+						<PortableText value={BioMock.about.bio} />
+					</div>
 				</div>
 			</section>
 
