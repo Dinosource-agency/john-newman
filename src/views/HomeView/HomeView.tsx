@@ -1,6 +1,5 @@
 import { FunctionComponent } from 'preact';
 import { NavigationLayout } from '~/layouts';
-import { Image } from '~/components/Image/Image';
 import { PortableText } from '@portabletext/react';
 import {
 	HomeViewMock,
@@ -19,6 +18,7 @@ import {
 	Album,
 	Footer,
 	VideoCard,
+	Image,
 } from '~/components';
 
 export const HomeView: FunctionComponent = () => {
