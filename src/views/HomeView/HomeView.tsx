@@ -128,7 +128,7 @@ export const HomeView: FunctionComponent = () => {
 			</section>
 			<section id="live" className="u-layout-grid p-home__bio">
 				<Image
-					src={BioMock.about.img[0].url}
+					src={BioMock.about.img.url}
 					alt="John Newman"
 					className="p-home__bio__image"
 				/>

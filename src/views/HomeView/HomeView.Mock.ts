@@ -103,12 +103,10 @@ export const TermsMock = {
 
 export const BioMock = {
 	about: {
-		img: [
-			{
-				_id: 'je id',
-				url: 'images/JN-bio.svg',
-			},
-		],
+		img: {
+			_id: '46846181981',
+			url: 'images/John-Newman-Bio.jpg',
+		},
 		bio: [
 			{
 				style: 'normal',
