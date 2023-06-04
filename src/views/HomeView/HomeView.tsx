@@ -126,16 +126,13 @@ export const HomeView: FunctionComponent = () => {
 					))}
 				</div>
 			</section>
-			<section
-				id="live"
-				className="u-layout-constrain u-layout-grid p-home__bio__padding"
-			>
+			<section id="live" className="u-layout-grid p-home__bio">
 				<Image
 					src={BioMock.about.img[0].url}
 					alt="John Newman"
 					className="p-home__bio__image"
 				/>
-				<div class="p-home__bio__about">
+				<div className="p-home__bio__about">
 					<Heading headingType="h5" headingStyle="h5">
 						Something about me
 					</Heading>
