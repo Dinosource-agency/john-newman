@@ -23,6 +23,7 @@
 
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(2, 1fr);
 	gap: rem(24px);
 
 	@include respond-to($tablet) {

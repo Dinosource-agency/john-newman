@@ -1,8 +1,7 @@
 import { FunctionComponent } from 'preact';
-import { useMemo } from 'preact/hooks';
 import { NavigationLayout } from '~/layouts';
 import { Image } from '~/components/Image/Image';
-import { Heading, TourDate, SocialIcons, Bio } from '~/components';
+import { Heading, TourDate, SocialIcons } from '~/components';
 import { TourDateMock, SocialLinksMock, BioMock } from './TourDate.Mock';
 import { PortableText } from '@portabletext/react';
 
@@ -38,7 +37,7 @@ export const HomeView: FunctionComponent = () => {
 					))}
 				</div>
 			</section>
-			<section id="live" className="u-layout-grid">
+			<section id="live" className="u-layout-grid a-bio__padding">
 				<Image
 					src={BioMock.about.img[0].url}
 					alt="John Newman"
