@@ -1,8 +1,9 @@
 import { Link } from 'preact-router';
 import { FunctionComponent } from 'preact';
 import { useState } from 'preact/hooks';
+import { NavigationProps } from './Navigation.types';
 
-export const Navigation: FunctionComponent = () => {
+export const Navigation: FunctionComponent<NavigationProps> = ({ shopUrl }) => {
 	const [isHamburgerMenuActive, setIsHamburgerMenuActive] = useState(false);
 	const toggleHamburgerMenu = () => {
 		setIsHamburgerMenuActive(!isHamburgerMenuActive);
@@ -90,7 +91,7 @@ export const Navigation: FunctionComponent = () => {
 					<Link
 						className="o-navigation__items__item__link"
 						target="_blank"
-						href="https://google.com"
+						href={shopUrl}
 					>
 						Store
 					</Link>

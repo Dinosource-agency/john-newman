@@ -4,6 +4,7 @@ export type HeadingProps = {
 	headingType: `${HeadingType}`;
 	headingStyle: `${HeadingType}`;
 	children: ComponentChildren;
+	className?: string;
 };
 
 enum HeadingType {

@@ -13,9 +13,11 @@
 	},
 	"dependencies": {
 		"@portabletext/react": "^3.0.0",
+		"@sanity/client": "^6.1.2",
 		"normalize.css": "^8.0.1",
 		"preact": "^10.13.1",
 		"preact-router": "^4.1.1",
+		"react-social-media-embed": "^2.3.5",
 		"sass": "^1.62.1",
 		"vite-tsconfig-paths": "^4.2.0"
 	},

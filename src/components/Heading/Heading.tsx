@@ -5,11 +5,12 @@ export const Heading: FunctionComponent<HeadingProps> = ({
 	children,
 	headingStyle,
 	headingType,
+	className,
 }) => {
 	return createElement(
 		headingType,
 		{
-			className: headingStyle,
+			className: `${headingStyle} ${className}`,
 		},
 		children,
 	);
