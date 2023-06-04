@@ -5,6 +5,7 @@ import {
 	YoutubeEmbedMock,
 	AlbumMock,
 	TermsMock,
+	LittleBioMock,
 } from './HomeView.Mock.ts';
 //import { useHomePage } from '~/hooks';
 import { YouTubeEmbed } from 'react-social-media-embed';
@@ -68,6 +69,12 @@ export const HomeView: FunctionComponent = () => {
 						className="p-home__video__embed--small"
 					/>
 				))}
+			</section>
+
+			<section id="littleBio" className="u-layout-constrain">
+				<Heading headingType="h3" headingStyle="h3">
+					{LittleBioMock.bio}
+				</Heading>
 			</section>
 
 			<section id="music" className="u-layout-constrain">

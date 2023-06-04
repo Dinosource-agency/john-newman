@@ -100,3 +100,7 @@ export const AlbumMock = [
 export const TermsMock = {
 	termsLink: 'https://www.fake.com',
 };
+
+export const LittleBioMock = {
+	bio: 'Taking his new sound to the masses, Newman curates a cutting-edge hybrid set that encompasses his signature live vocals and DJing.',
+};
