@@ -153,3 +153,6 @@ export const BioMock = {
 		],
 	},
 };
+
+export const Caption =
+	'Taking his new sound to the masses, Newman curates a cutting-edge hybrid set that encompasses his signature live vocals and DJing.';

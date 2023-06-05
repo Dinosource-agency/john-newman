@@ -7,6 +7,7 @@ import {
 	AlbumMock,
 	TermsMock,
 	BioMock,
+	Caption,
 } from './HomeView.Mock.ts';
 //import { useHomePage } from '~/hooks';
 import { YouTubeEmbed } from 'react-social-media-embed';
@@ -71,6 +72,16 @@ export const HomeView: FunctionComponent = () => {
 						className="p-home__video__embed--small"
 					/>
 				))}
+			</section>
+
+			<section className="u-layout-constrain p-home__caption">
+				<Heading
+					className="p-home__caption__text"
+					headingType="h2"
+					headingStyle="h3"
+				>
+					{Caption}
+				</Heading>
 			</section>
 
 			<section id="music" className="u-layout-constrain">

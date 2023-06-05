@@ -19,6 +19,14 @@ body {
 
 .h3 {
 	font-size: rem(48px);
+
+	@include respond-to($tablet) {
+		font-size: rem(32px);
+	}
+
+	@include respond-to($mobile) {
+		font-size: rem(24px);
+	}
 }
 
 .h4 {

@@ -90,6 +90,13 @@ body {
 		}
 	}
 
+	&__caption {
+		margin-top: rem(192px);
+		&__text {
+			text-align: center;
+		}
+	}
+
 	&__tour {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
