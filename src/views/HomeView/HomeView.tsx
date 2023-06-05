@@ -39,16 +39,18 @@ export const HomeView: FunctionComponent = () => {
 						Show video
 					</Heading>
 				</div>
-				<div className="p-home__video__embed--big">
-					<YouTubeEmbed
-						url={data.bigVideos}
-						width={100 + '%'}
-						youTubeProps={{
-							iframeClassName:
-								'p-home__video__embed--big__iframe',
-						}}
-					/>
-				</div>
+				{data.bigVideos ? (
+					<div className="p-home__video__embed--big">
+						<YouTubeEmbed
+							url={data.bigVideos}
+							width={100 + '%'}
+							youTubeProps={{
+								iframeClassName:
+									'p-home__video__embed--big__iframe',
+							}}
+						/>
+					</div>
+				) : null}
 				{data &&
 					data.smallVideos &&
 					data.smallVideos.length > 0 &&
