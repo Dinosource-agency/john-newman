@@ -18,21 +18,9 @@ body {
 }
 
 .h3 {
-	padding: rem(160px) 0 rem(80px) 0;
 	font-size: rem(48px);
 	font-weight: 600;
 	line-height: rem(60px);
-	text-align: center;
-	@include respond-to($tablet) {
-		padding-top: rem(120px);
-		font-size: rem(32px);
-		line-height: rem(40px);
-		padding: rem(120px) 0 0 0;
-	}
-	@include respond-to($mobile) {
-		font-size: rem(24px);
-		line-height: rem(32px);
-	}
 }
 
 .h4 {

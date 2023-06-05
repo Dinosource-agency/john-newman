@@ -73,7 +73,7 @@ export const HomeView: FunctionComponent = () => {
 
 			<section id="littleBio" className="u-layout-constrain">
 				<Heading headingType="h3" headingStyle="h3">
-					{LittleBioMock.bio}
+					<div class="littleBio">{LittleBioMock.bio}</div>
 				</Heading>
 			</section>
 
