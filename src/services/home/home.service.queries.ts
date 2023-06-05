@@ -13,6 +13,11 @@ export const homePageQuery = `
   caption,
   socials,
   shows,
+  bigVideos,
+  smallVideos,
+  spotifyUrl,
+  terms,
+    appleMusicUrl,
   videos[] {
     title,
     url,

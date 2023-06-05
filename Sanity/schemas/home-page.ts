@@ -47,9 +47,14 @@ export default {
       ],
     },
     {
-      name: 'videos',
+      name: 'bigVideos',
+      type: 'url',
+      title: 'Big Video',
+    },
+    {
+      name: 'smallVideos',
       type: 'array',
-      title: 'Videos',
+      title: 'Small Videos',
       of: [
         {
           type: 'object',
@@ -101,6 +106,11 @@ export default {
               type: 'url',
               title: 'Deezer URL',
             },
+            {
+              title: 'Image description',
+              name: 'imageDescription',
+              type: 'string',
+            },
           ],
         },
       ],
@@ -119,14 +129,19 @@ export default {
               title: 'Title',
             },
             {
-              name: 'location',
+              name: 'city',
               type: 'string',
-              title: 'Location',
+              title: 'City',
             },
             {
-              name: 'date',
-              type: 'date',
-              title: 'Date',
+              name: 'venue',
+              type: 'string',
+              title: 'Venue',
+            },
+            {
+              name: 'country',
+              type: 'string',
+              title: 'Country',
             },
             {
               name: 'externalUrl',
@@ -179,6 +194,21 @@ export default {
           ],
         },
       ],
+    },
+    {
+      name: 'terms',
+      type: 'url',
+      title: 'Terms',
+    },
+    {
+      name: 'appleMusicUrl',
+      type: 'url',
+      title: 'Apple Music URL',
+    },
+    {
+      name: 'spotifyUrl',
+      type: 'url',
+      title: 'Spotify URL',
     },
   ],
 }

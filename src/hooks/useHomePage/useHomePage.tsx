@@ -1,16 +1,9 @@
 import { homeService } from '~/services';
 import { useState, useEffect } from 'preact/hooks';
+import { HomePageInitialState } from './useHomePage.const';
 
 export const useHomePage = () => {
-	const [data, setData] = useState({
-		shopUrl: '',
-		socials: {
-			facebook: '',
-			instagram: '',
-			twitter: '',
-			tiktok: '',
-		},
-	});
+	const [data, setData] = useState(HomePageInitialState);
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState('');
 

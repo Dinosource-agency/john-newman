@@ -1,49 +1,62 @@
-export interface HomePage {
-	shopUrl: string;
-	_updatedAt: string;
-	_createdAt: string;
-	_ref: string;
-	_type: string;
-	caption: string;
-	socials: Social;
-	shows?: ShowsEntity[];
-	videos?: VideosEntity[];
-	image: Image;
-	albums?: AlbumsEntity[];
+interface ImageAsset {
+	url: string;
+	_id: string;
 }
 
-export interface Social {
+interface Socials {
 	facebook: string;
-	twitter: string;
 	instagram: string;
+	twitter: string;
 	tiktok: string;
 }
 
-export interface ShowsEntity {
-	title: string;
-	date: string;
-	externalUrl: string;
-	location: string;
-	_key: string;
+interface About {
+	image: {
+		asset: ImageAsset;
+	};
+	bio: [];
 }
 
-export interface VideosEntity {
-	title: string;
+interface SmallVideo {
 	url: string;
+	title: string;
 	description: string;
 }
-export interface Image {
-	asset: Asset;
+
+interface Show {
+	city: string;
+	externalUrl: string;
+	_key: string;
+	title: string;
+	country: string;
+	venue: string;
 }
 
-export interface Asset {
-	_id: string;
-	url: string;
-}
-
-export interface AlbumsEntity {
-	spotifyUrl: string;
+interface Album {
 	appleMusicUrl: string;
 	deezerUrl: string;
-	image: Image;
+	imageDescription: string;
+	image: {
+		asset: {
+			url: string;
+		};
+	};
+	spotifyUrl: string;
+}
+
+export interface HomePage {
+	shopUrl: string;
+	caption: string;
+	socials: Socials;
+	image: {
+		asset: ImageAsset;
+	};
+	about: About;
+	bigVideos: string;
+	smallVideos: SmallVideo[];
+	shows: Show[];
+	albums: Album[];
+	spotifyUrl: string;
+	appleMusicUrl: string;
+	terms: string;
 }

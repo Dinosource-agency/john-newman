@@ -8,7 +8,7 @@ export const Album: FunctionComponent<AlbumProps> = ({
 	alt,
 	spotifyLink,
 	appleMusicLink,
-	breezerLink,
+	deezerLink,
 }) => {
 	return (
 		<div className="m-album-container">
@@ -32,7 +32,7 @@ export const Album: FunctionComponent<AlbumProps> = ({
 				<Link
 					className="m-album-links__link"
 					target="_blank"
-					href={breezerLink}
+					href={deezerLink}
 				>
 					Deezer
 				</Link>

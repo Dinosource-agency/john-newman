@@ -3,5 +3,5 @@ export type AlbumProps = {
 	alt: string;
 	spotifyLink: string;
 	appleMusicLink: string;
-	breezerLink: string;
+	deezerLink: string;
 };

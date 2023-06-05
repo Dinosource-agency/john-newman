@@ -2,9 +2,14 @@ import { FunctionComponent } from 'preact';
 import { Link } from 'preact-router';
 import { FooterProps } from './Footer.types';
 import { Image, SocialIcons } from '~/components';
-import { SocialLinksMock } from '~/views/HomeView/HomeView.Mock';
 
-export const Footer: FunctionComponent<FooterProps> = ({ termsLink }) => {
+export const Footer: FunctionComponent<FooterProps> = ({
+	termsLink,
+	facebookLink,
+	instagramLink,
+	tiktokLink,
+	twitterLink,
+}) => {
 	return (
 		<footer className="o-footer">
 			<div className="u-layout-constrain">
@@ -48,10 +53,10 @@ export const Footer: FunctionComponent<FooterProps> = ({ termsLink }) => {
 							Social Media
 						</p>
 						<SocialIcons
-							facebook={SocialLinksMock.facebook}
-							instagram={SocialLinksMock.instagram}
-							tiktok={SocialLinksMock.tiktok}
-							twitter={SocialLinksMock.twitter}
+							facebook={facebookLink}
+							instagram={instagramLink}
+							tiktok={tiktokLink}
+							twitter={twitterLink}
 							direction="row"
 						/>
 					</div>
