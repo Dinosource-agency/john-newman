@@ -47,6 +47,11 @@ export default {
       ],
     },
     {
+      name: 'videoTitle',
+      type: 'string',
+      title: 'Video Titel',
+    },
+    {
       name: 'bigVideos',
       type: 'url',
       title: 'Big Video',
@@ -79,9 +84,15 @@ export default {
       ],
     },
     {
+      name: 'albumsTitle',
+      type: 'string',
+      title: 'Albums Titel',
+    },
+    {
       name: 'albums',
       type: 'array',
       title: 'Albums',
+      validation: (Rule: any) => Rule.required().max(8),
       of: [
         {
           type: 'object',
@@ -114,6 +125,11 @@ export default {
           ],
         },
       ],
+    },
+    {
+      name: 'showsTitle',
+      type: 'string',
+      title: 'Shows Titel',
     },
     {
       name: 'shows',
@@ -157,6 +173,11 @@ export default {
       type: 'object',
       title: 'About',
       fields: [
+        {
+          name: 'title',
+          type: 'string',
+          title: 'Title',
+        },
         {
           name: 'image',
           type: 'image',

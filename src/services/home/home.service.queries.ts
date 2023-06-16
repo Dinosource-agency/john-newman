@@ -2,6 +2,7 @@ export const homePageQuery = `
 *[_type == "homePage"][0] {
   about {
     bio,
+    title,
     image {
       asset -> {
         _id,
@@ -10,6 +11,9 @@ export const homePageQuery = `
     }
   },
   shopUrl,
+  videoTitle,
+  albumsTitle,
+  showsTitle,
   caption,
   socials,
   shows,

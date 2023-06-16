@@ -14,6 +14,7 @@ export const HomePageInitialState = {
 		},
 	},
 	about: {
+		title: '',
 		image: {
 			asset: {
 				url: '',
@@ -22,6 +23,7 @@ export const HomePageInitialState = {
 		},
 		bio: [],
 	},
+	videoTitle: '',
 	bigVideos: '',
 	smallVideos: [
 		{
@@ -30,6 +32,7 @@ export const HomePageInitialState = {
 			description: '',
 		},
 	],
+	showsTitle: '',
 	shows: [
 		{
 			city: '',
@@ -40,6 +43,7 @@ export const HomePageInitialState = {
 			venue: '',
 		},
 	],
+	albumsTitle: '',
 	albums: [
 		{
 			appleMusicUrl: '',

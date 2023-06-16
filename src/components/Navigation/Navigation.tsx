@@ -72,9 +72,9 @@ export const Navigation: FunctionComponent<NavigationProps> = ({ shopUrl }) => {
 				>
 					<Link
 						className="o-navigation__items__item__link"
-						href="#live"
+						href="#video"
 					>
-						Live
+						Video
 					</Link>
 				</li>
 				<li

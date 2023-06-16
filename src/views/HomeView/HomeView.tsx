@@ -33,10 +33,10 @@ export const HomeView: FunctionComponent = () => {
 					/>
 				</div>
 			</section>
-			<section id="live" className="u-layout-grid p-home__video">
+			<section id="video" className="u-layout-grid p-home__video">
 				<div className="p-home__video__title">
 					<Heading headingType="h4" headingStyle="h4">
-						Show video
+						{data.videoTitle}
 					</Heading>
 				</div>
 				{data.bigVideos ? (
@@ -81,7 +81,7 @@ export const HomeView: FunctionComponent = () => {
 				<section id="music" className="u-layout-constrain">
 					<div className="p-home__releases__heading">
 						<Heading headingType="h4" headingStyle="h4">
-							Latest releases
+							{data.albumsTitle}
 						</Heading>
 						<div className="p-home__links">
 							<MusicLink
@@ -144,7 +144,7 @@ export const HomeView: FunctionComponent = () => {
 					/>
 					<div className="p-home__bio__about">
 						<Heading headingType="h5" headingStyle="h5">
-							Something about me
+							{data.about.title}
 						</Heading>
 						<div className="p-home__bio__about__paragraph">
 							<PortableText value={data.about.bio} />
