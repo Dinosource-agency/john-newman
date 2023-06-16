@@ -12,3 +12,7 @@
 //*** PAGES ***
 //::::::::::::::
 @use './pages' as *;
+
+html {
+  scroll-behavior: smooth;
+}

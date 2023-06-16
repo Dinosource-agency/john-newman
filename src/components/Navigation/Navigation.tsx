@@ -94,6 +94,17 @@ export const Navigation: FunctionComponent<NavigationProps> = ({ shopUrl }) => {
 				>
 					<Link
 						className="o-navigation__items__item__link"
+						href="#tour"
+					>
+						Tour
+					</Link>
+				</li>
+				<li
+					onClick={toggleHamburgerMenu}
+					className="o-navigation__items__item"
+				>
+					<Link
+						className="o-navigation__items__item__link"
 						href="#about"
 					>
 						About

@@ -12,7 +12,7 @@
 	gap: rem(24px);
 	top: 0;
 
-	@include respond-to($tablet-small) {
+	@include respond-to($tablet) {
 		display: flex;
 		justify-content: space-between;
 		margin-top: 0;
@@ -30,7 +30,7 @@
 	&__hamburger {
 		display: none;
 		cursor: pointer;
-		@include respond-to($tablet-small) {
+		@include respond-to($tablet) {
 			position: relative;
 			display: block;
 			width: rem(36px);
@@ -75,14 +75,14 @@
 
 	&__logo {
 		&--big {
-			@include respond-to($tablet-small) {
+			@include respond-to($tablet) {
 				display: none;
 			}
 		}
 
 		&--small {
 			display: none;
-			@include respond-to($tablet-small) {
+			@include respond-to($tablet) {
 				display: block;
 			}
 		}
@@ -97,23 +97,32 @@
 		list-style: none;
 		background-color: $dark-scale100;
 
-		@include respond-to($tablet-small) {
+		@include respond-to($tablet) {
 			display: none;
 			position: absolute;
-			min-height: calc(100vh - rem(160px));
+			min-height: calc(100vh - rem(320px));
 			top: 100%;
 			left: 0;
 			width: 100%;
 			flex-direction: column;
-			align-items: flex-start;
+			justify-content: space-between;
 			z-index: 1;
 			transition: all 0.3s ease-in-out;
 			padding: rem(64px) 0 0;
 			gap: rem(48px);
-
 			&--active {
 				display: flex;
 				align-items: center;
+			}
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100vh;
+				background-color: $dark-scale100;
+				z-index: -1;
 			}
 		}
 
@@ -121,8 +130,8 @@
 			padding-left: rem(40px);
 			padding-right: rem(40px);
 
-			@include respond-to($tablet-small) {
-				font-size: rem(48px);
+			@include respond-to($tablet) {
+				font-size: rem(32px);
 				text-align: center;
 				font-weight: 200;
 			}
@@ -130,7 +139,7 @@
 			&:not(:last-child) {
 				border-right: 1px solid white;
 
-				@include respond-to($tablet-small) {
+				@include respond-to($tablet) {
 					border-right: none;
 				}
 			}

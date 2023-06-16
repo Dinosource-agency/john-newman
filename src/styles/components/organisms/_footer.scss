@@ -35,7 +35,7 @@
 				text-decoration: none;
 			}
 			&__logo {
-				max-height: rem(24px);
+				max-height: rem(40px);
 				object-fit: contain;
 
 				@include respond-to($tablet) {
@@ -86,6 +86,22 @@
 					flex-direction: column;
 				}
 			}
+		}
+	}
+
+	&__contact{
+		display: flex;
+		justify-content: space-between;
+		margin-top: rem(80px);
+		flex-wrap: wrap;
+		gap: rem(32px);
+
+		.h5 {
+			margin: 0;
+		}
+
+		a {
+			color: $white;
 		}
 	}
 

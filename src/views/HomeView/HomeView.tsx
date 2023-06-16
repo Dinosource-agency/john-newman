@@ -115,7 +115,7 @@ export const HomeView: FunctionComponent = () => {
 			) : null}
 
 			{data.shows ? (
-				<section className="u-layout-constrain p-home__tour-dates">
+				<section id="tour" className="u-layout-constrain p-home__tour-dates">
 					<Heading headingType="h4" headingStyle="h4">
 						Tour dates
 					</Heading>
@@ -128,7 +128,7 @@ export const HomeView: FunctionComponent = () => {
 								city={tourDate.city}
 								country={tourDate.country}
 								link={tourDate.externalUrl}
-								linkText="Check it out"
+								linkText="TICKETS & INFO"
 							/>
 						))}
 					</div>
