@@ -4,11 +4,13 @@
 .m-tour-date {
 	background-color: $rich-black;
 	padding: rem(24px);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 
 	&__details {
 		display: flex;
 		flex-direction: row;
-		align-items: top;
 		justify-content: space-between;
 		margin-bottom: rem(24px);
 	}
@@ -28,6 +30,7 @@
 	}
 
 	&__link {
+		display: inline-block;
 		a {
 			text-decoration: none;
 			color: $dark-scale0;
